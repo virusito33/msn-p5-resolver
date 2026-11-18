@@ -1,14 +1,14 @@
 :root {
-  --bg: #f5f6fa; --card: #ffffff; --text: #1d2433; --muted: #5d667a; --line: #e2e5ee;
-  --accent: #4f46e5; --accent-soft: #eceafd;
+  --bg: #faf5f6; --card: #ffffff; --text: #1d2433; --muted: #5d667a; --line: #efdfe2;
+  --accent: #c81e3a; --accent-soft: #fde8eb;
   --ok: #157f4b; --ok-bg: #e4f6ec; --warn: #9a5b00; --warn-bg: #fff2d9;
-  --code-bg: #0f172a; --code-text: #e2e8f0;
+  --code-bg: #1c1014; --code-text: #e2e8f0;
   --radius: 14px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0e1220; --card: #171c2f; --text: #e8ebf5; --muted: #98a1b8; --line: #2a3150;
-    --accent: #8b85ff; --accent-soft: #25264a;
+    --bg: #160d10; --card: #22151a; --text: #f5e9ec; --muted: #b89ca3; --line: #43262e;
+    --accent: #ff6b81; --accent-soft: #3a1820;
     --ok: #62d49a; --ok-bg: #12301f; --warn: #f3c46a; --warn-bg: #3a2c0d;
   }
 }
@@ -19,7 +19,7 @@ body {
   font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
-.top { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; padding: 22px 0 18px; }
+.top { background: linear-gradient(135deg, #b0122d, #e8433f); color: #fff; padding: 22px 0 18px; }
 .top h1 { margin: 0; font-size: clamp(1.15rem, 4.5vw, 1.6rem); }
 .sub { margin: 4px 0 0; opacity: .85; font-size: .92rem; }
 
@@ -82,7 +82,7 @@ table.mini th, table.ord th { background: var(--accent-soft); }
 pre.code { margin: 0; background: var(--code-bg); color: var(--code-text); padding: 14px; border-radius: 10px;
   overflow-x: auto; font: .85rem/1.5 ui-monospace, "Cascadia Code", Consolas, monospace; tab-size: 4; }
 .copy { position: absolute; top: 8px; right: 8px; min-height: 0; padding: 4px 10px; font-size: .78rem;
-  background: #1e293b; color: #e2e8f0; border-color: #334155; }
+  background: #2e1a20; color: #f5e9ec; border-color: #4d2a33; }
 .tok-c { color: #8ba3c7; font-style: italic; } .tok-s { color: #a5e3a1; }
 .tok-k { color: #c4a7ff; } .tok-n { color: #ffcf8a; } .tok-f { color: #7dd3fc; }
 
