@@ -50,11 +50,11 @@
     var badge = {
       verified: '<span class="badge ok" title="La opción cumple la EDO y las condiciones (sustitución) y coincide con la solución deducida">✓ Verificada</span>',
       ninguna: '<span class="badge ok" title="Ninguna de las otras opciones cumple la EDO o las condiciones (comprobado sustituyendo cada una)">✓ Verificada por descarte</span>',
-      tie: '<span class="badge ind" title="Dirichlet y Mixtas dan la misma aproximación; cualquier orden entre ellas es válido">Empate Dirichlet = Mixtas</span>',
-      ambig: '<span class="badge ind" title="Dos opciones válidas por el empate; ejecuta el código en Sage">Ambigua</span>'
+      tie: '<span class="badge ind" title="Dirichlet y Mixtas dan la misma aproximación; en Sage se desempata con Dirichlet antes que Mixtas">Empate Dirichlet = Mixtas</span>',
+      ambig: '<span class="badge ind" title="Puede ser la opción con Mixtas antes que Dirichlet o «Ninguna»">Ambigua</span>'
     }[p.status] || "";
     var ansLine = (p.alt && p.alt.length)
-      ? "Respuesta correcta: opción " + p.alt.join(" u opción ") + " (según el redondeo de Sage) "
+      ? "Respuesta correcta: opción " + p.alt.join(" u opción ") + " (no se puede saber con certeza) "
       : "Respuesta correcta: opción " + p.answer + (ansTxt ? " (" + ansTxt + ")" : "") + " ";
     return '<div class="part">' +
       '<h4><span class="n">Apartado ' + p.n + ".</span> " + p.prompt + "</h4>" +

@@ -33,8 +33,8 @@
   <footer class="foot">
     <p><span class="badge ok">✓ Verificada</span> el valor calculado con MDF coincide con la opción en todas sus cifras (o la ordenación coincide exactamente).
        <span class="badge ok">✓ Verificada por descarte</span> el valor calculado no coincide con ninguna de las tres opciones numéricas, así que la respuesta es «Ninguna de las otras».
-       <span class="badge ind">Empate</span> con p = 10 y h = 0.2, Dirichlet y Mixtas dan la misma aproximación; se acepta cualquier orden entre ellas.
-       <span class="badge ind">Ambigua</span> por ese empate hay dos opciones válidas (resaltadas): ejecuta el código en Sage y marca la que imprima.</p>
+       <span class="badge ind">Empate</span> con p = 10 y h = 0.2, Dirichlet y Mixtas dan la misma aproximación (también en Sage); se toma Dirichlet antes que Mixtas, que es como desempata Sage al ordenar.
+       <span class="badge ind">Ambigua</span> solo aparece el orden con Mixtas antes que Dirichlet: la respuesta es esa opción o «Ninguna» (ambas resaltadas), según cómo desempatara el generador.</p>
     <p>Los cálculos se han hecho en Python con 40 cifras, replicando el MDF del cuaderno de la práctica. El código SageMath no se ha ejecutado en SageMath. Las explicaciones se generan con plantillas por tipo de apartado.</p>
   </footer>
 </main>
