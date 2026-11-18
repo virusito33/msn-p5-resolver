@@ -100,3 +100,6 @@ table.ord td:first-child, table.ord th:first-child { text-align: left; }
 .opt.alt { border-color: var(--warn); background: var(--warn-bg); }
 .opt.alt .k { background: var(--warn); color: #fff; }
 .dbody ol li { margin: 4px 0; }
+.aviso { background: var(--warn-bg); color: var(--warn); border: 1px solid var(--warn); border-left-width: 5px;
+  border-radius: 10px; padding: 12px 14px; margin: 0 0 16px; font-size: .95rem; }
+p.aviso { margin: 4px 0 8px; padding: 8px 12px; font-weight: 600; }

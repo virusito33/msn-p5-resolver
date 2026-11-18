@@ -60,6 +60,7 @@
       '<h4><span class="n">Apartado ' + p.n + ".</span> " + p.prompt + "</h4>" +
       '<ul class="opts' + (isImg ? " img" : "") + '">' + opts + "</ul>" +
       '<p class="answer">' + ansLine + badge + "</p>" +
+      ((p.n === 9 && ({13:1,68:1,107:1,144:1,35:1,48:1,55:1,58:1,63:1,133:1})[current]) ? '<p class="aviso">⚠ Consulta este apartado con el profesor (ver aviso arriba).</p>' : "") +
       "<details><summary>Ver explicación</summary><div class=\"dbody\">" + p.expl + "</div></details>" +
       "<details><summary>Ver código SageMath</summary><div class=\"dbody\"><div class=\"codewrap\">" +
       '<button type="button" class="copy">Copiar</button><pre class="code"><code>' + highlight(currentHead + p.code) + "</code></pre></div></div></details>" +
@@ -72,6 +73,16 @@
     currentHead = q.head;
     current = n;
     var html = '<div class="qhead"><h2>Cuestionario ' + q.num + '</h2><span class="code">código ' + q.code + "</span></div>";
+    var AVISO = {13:1, 68:1, 107:1, 144:1, 35:2, 48:2, 55:2, 58:2, 63:2, 133:2};
+    if (AVISO[q.num]) {
+      var p9 = q.parts[8];
+      var detalle = AVISO[q.num] === 1
+        ? "La web marca la <b>opción " + p9.answer + "</b> (Neumann, Robin, Dirichlet, Mixtas), pero también aparece como opción el orden con Mixtas antes que Dirichlet."
+        : "La respuesta es la <b>opción " + p9.alt[0] + "</b> (Neumann, Robin, Mixtas, Dirichlet) o la <b>opción 4</b> («Ninguna de las otras respuestas»).";
+      html += '<div class="aviso" role="alert"><b>⚠ Pregunta al profesor el apartado 9.</b> ' +
+        "Con h = 0.2, Dirichlet y Mixtas dan exactamente la misma aproximación, así que el orden entre ellas depende de cómo se desempate. " +
+        detalle + " Pregunta cuál considera correcta antes de responder ese apartado. El resto de apartados son fiables.</div>";
+    }
     html += '<article class="exercise"><h3>EJERCICIO 1</h3>' +
       '<div class="statement">' + q.statement + "</div>" + q.parts.map(partHtml).join("") + "</article>";
     quizEl.innerHTML = html;
