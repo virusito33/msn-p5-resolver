@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionarios Práctica 5 MSN</title>
+<meta name="description" content="Consulta de cuestionarios de la Práctica 5 de Modelado y Simulación Numérica (método de diferencias finitas): respuestas, explicaciones y código SageMath.">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Práctica 5 · Problemas de contorno lineales de 2º orden</h1>
+    <p class="sub">Modelado y Simulación Numérica · Método de diferencias finitas (Dirichlet, Neumann, mixtas, Robin) · 150 cuestionarios</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <form id="nav" class="nav" autocomplete="off" novalidate>
+    <button type="button" id="prev" aria-label="Cuestionario anterior">‹</button>
+    <label class="field">
+      <span>Nº de cuestionario</span>
+      <input id="num" type="text" inputmode="numeric" placeholder="1 – 150" aria-describedby="msg">
+    </label>
+    <button type="button" id="next" aria-label="Cuestionario siguiente">›</button>
+    <button type="submit" class="go">Ver</button>
+  </form>
+  <p id="msg" class="msg" role="status" aria-live="polite"></p>
+
+  <section id="quiz" aria-live="polite"></section>
+
+  <footer class="foot">
+    <p><span class="badge ok">✓ Verificada</span> el valor calculado con MDF coincide con la opción en todas sus cifras (o la ordenación coincide exactamente).
+       <span class="badge ok">✓ Verificada por descarte</span> el valor calculado no coincide con ninguna de las tres opciones numéricas, así que la respuesta es «Ninguna de las otras».
+       <span class="badge ind">Empate</span> con p = 10 y h = 0.2, Dirichlet y Mixtas dan la misma aproximación; se acepta cualquier orden entre ellas.
+       <span class="badge ind">Ambigua</span> por ese empate hay dos opciones válidas (resaltadas): ejecuta el código en Sage y marca la que imprima.</p>
+    <p>Los cálculos se han hecho en Python con 40 cifras, replicando el MDF del cuaderno de la práctica. El código SageMath no se ha ejecutado en SageMath. Las explicaciones se generan con plantillas por tipo de apartado.</p>
+  </footer>
+</main>
+
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/auto-render.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
